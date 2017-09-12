@@ -35,7 +35,7 @@ simConfig.recordStep = 0.5
 simConfig.filename = 'CSTR_output'
 simConfig.savePickle = True
 simConfig.analysis['plotRaster'] = True
-simConfig.analysis['plotTraces'] = {'include': [2]}
+simConfig.analysis['plotTraces'] = {'include': [0]}
 simConfig.analysis['plot2Dnet'] = True
 
 sim.createSimulateAnalyze(netParams, simConfig)
