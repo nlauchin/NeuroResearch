@@ -40,3 +40,5 @@ simConfig.analysis['plotRaster'] = {'saveFig': True}
 simConfig.analysis['plotTraces'] = {'include': [0]}
 simConfig.analysis['plot2Dnet'] = True
 
+sim.createSimulateAnalyze(netParams, simConfig)
+import pylab; pylab.show()
