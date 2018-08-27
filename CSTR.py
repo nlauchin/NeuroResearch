@@ -18,8 +18,6 @@ netParams.cellParams['CSTRrule'] = cellRule
 
 netParams.synMechParams['AMPA'] = {'mod': 'Exp2Syn', 'tau1': 0.1, 'tau2': 1.0, 'e': 0}
 
-netParams.addConnParams('CSTR_pop->CSTR_pop',{'preConds': {'popLabel': 'CSTR_pop'}, 'postConds': {'postLabel': 'CSTR_pop'}, 'delay':5, 'sec':'dend', 'loc':1.0, 'synMech':'exc'})
-
 netParams.stimSourceParams['Input_1'] = {'type': 'NetStim', 'rate': 10, 'noise': 0.5, 'start': 1}
 
 netParams.stimTargetParams['Input_1->CSTR_pop'] = {'source': 'Input_1', 'sec':'soma', 'loc':0.5, 'conds': {'popLabel': 'CSTR_pop'}}
