@@ -6,7 +6,7 @@ cfg.recordTracesLoc = 0.1
 
 cfg.duration = 0.5*1e3
 cfg.dt = 0.05
-cfg.seeds = {'conn': 1, 'stim': 1, 'loc': 1}
+cfg.seeds = {'conn': 1, 'stim': 2, 'loc': 1}
 cfg.verbose = 0
 cfg.hParams = {'celsius': 34, 'v_init': -94.6}
 
