@@ -35,6 +35,42 @@ def batchCSTR():
     initCfg[('NetStim1', 'delay')] = 0
     #initCfg[('GroupNetStimW1', 'pop')] = 'None'
     initCfg['addIClamp'] = 0
-    
+
+#secs = []
+#locs = []
+#pops=['IT_full_BS1578']
+#weights = [0.1]
+
+#def weightNormE(pops=['IT_full_BS1578'],
+                #segs = None, allSegs = True, rule = 'IT_full', weights= [0.1]):
+    # Add params
+    #from cfg import cfg
+    #from M1_detailed import netParams
+    #excludeSegs = ['axon']
+    #if not segs:
+        #for secName,sec in netParams.cellParams[rule]['secs'].iteritems():
+            #if secName not in excludeSegs:
+                #if allSegs:
+                    #nseg = sec['geom']['nseg']
+                    #for iseg in range(nseg):
+                        #secs.append(secName)
+                        #locs.append((iseg+1)*(1.0/(nseg+1)))
+                #else:
+                    #secs.append(secName)
+                    #locs.append(0.5)
+
+
+
+#weightNormE(pops= pops,
+                #segs = None, allSegs = True, rule = 'IT_full', weights=weights)
+
+#params = specs.ODict()
+#params[('NetStim1', 'pop')] = pops
+#params[('NetStim1', 'secList')] = secs
+#params[('NetStim1', 'loc')] = locs
+#params[('NetStim1', 'weight')] = weights
+#groupedParams = [('NetStim1', 'secList'), ('NetStim1', 'loc')]
+
 if __name__ == '__main__':
     batchCSTR()
+
