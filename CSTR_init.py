@@ -4,6 +4,4 @@ simConfig, netParams = sim.readCmdLineArgs(simConfigDefault='CSTR_cfg.py', netPa
 
 sim.createSimulateAnalyze(netParams=netParams, simConfig=simConfig)
 
-
-
 import pylab; pylab.show()
