@@ -2,9 +2,7 @@ from netpyne import specs
 
 cfg = specs.SimConfig()
 
-cfg.synMechTau1 = 0.1
-cfg.connLoc = 1.0
-
+# simulation configuration
 cfg.duration = 0.5*1e3
 cfg.dt = 0.05
 cfg.seeds = {'conn': 1, 'stim': 1, 'loc': 1}
@@ -31,8 +29,6 @@ cfg.synWeightFractionEI = [1.0, 0.1]
 cfg.synWeightFractionSOME = [1.0, 7.5] 
 
 cfg.analysis['plotTraces'] = {'include': [('PT5B',00)], 'saveFig': True, 'showFig': False}
-cfg.addNetStim = 1
 
-cfg.NetStim1 = {'numStims': 1,'pop': ['IT_L5B'], 'cellRule': 'CSTR_pop', 'secList': 'dend_16', 'allSegs': True, \
- 						'synMech': ['AMPA', 'NMDA'] , 'start': 300, 'interval': 1000/20.0, 'noise': 0.25, 'number': 1, 'loc': 0.5, 'weight': 0.01, 'delay': 0}
-cfg.printPopAvgRates = True
+# parameters for batch
+stimSec = 'soma_0'
