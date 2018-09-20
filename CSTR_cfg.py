@@ -29,7 +29,7 @@ cfg.synWeightFractionEE = [1.0, 0.1]
 cfg.synWeightFractionEI = [1.0, 0.1] 
 cfg.synWeightFractionSOME = [1.0, 7.5] 
 
-cfg.analysis['plotTraces'] = {'include': [('ITpop',0)], 'saveFig': False, 'showFig': True}
+cfg.analysis['plotTraces'] = {'include': [('ITpop',0)], 'saveFig': True, 'showFig': False}
 #cfg.analysis['plotShape'] = True
 
 cfg.printPopAvgRates = True
@@ -37,3 +37,4 @@ cfg.printPopAvgRates = True
 
 # parameters for batch
 cfg.stimSec = 'soma_0'
+cfg.stimWeight = 0.2

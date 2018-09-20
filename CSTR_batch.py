@@ -11,9 +11,14 @@ def batchCSTR():
 
     secs = netParams.cellParams['ITrule']['secs'].keys()
     
+
     params['stimSec'] = secs
+    params[('recordTraces', 'V_dend', 'sec')] = secs
+    params['stimWeight'] = [0.2, 0.4]
     
-    b = Batch(params=params, netParamsFile = 'CSTR_netParams.py', cfgFile = 'CSTR_cfg.py')
+    groupedParams = ['stimSec', ('recordTraces', 'V_dend', 'sec')]
+    
+    b = Batch(params=params, netParamsFile = 'CSTR_netParams.py', cfgFile = 'CSTR_cfg.py', groupedParams = groupedParams)
     
     b.batchLabel = 'secStims'
     b.saveFolder = 'CSTR_data'
