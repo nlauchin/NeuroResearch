@@ -19,8 +19,10 @@ netParams.synMechParams['AMPA'] = {'mod': 'Exp2Syn', 'tau1': 0.1, 'tau2': 1.0, '
 
 # Netstim input
 netParams.stimSourceParams['Input_1'] = {'type': 'NetStim', 'rate': 10, 'noise': 0.0, 'start': 100}
-netParams.stimTargetParams['Input_1->IT'] = {'source': 'Input_1', 'sec': cfg.stimSec, 'loc': 0.5, 'weight': cfg.stimWeight, 
+netParams.stimTargetParams['Input_1->IT'] = {'source': 'Input_1', 'sec': 'soma_0', 'loc': 0.5, 'weight': 0.2, 
 														'delay': 0, 'synMech': 'AMPA', 'conds': {'popLabel': 'ITpop'}}
 
 
-
+# add secs to record
+secs = netParams.cellParams['ITrule']['secs'].keys()
+cfg.recordTraces = {'V_'+sec: {'sec':sec, 'loc': 0.5, 'var':'v'} for sec in secs }
