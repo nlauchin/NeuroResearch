@@ -29,7 +29,7 @@ cfg.synWeightFractionEE = [1.0, 0.1]
 cfg.synWeightFractionEI = [1.0, 0.1] 
 cfg.synWeightFractionSOME = [1.0, 7.5] 
 
-cfg.analysis['plotTraces'] = {'include': [('ITpop',0)], 'saveFig': True, 'showFig': False}
+#cfg.analysis['plotTraces'] = {'include': [('ITpop',0)], 'saveFig': True, 'showFig': False}
 #cfg.analysis['plotShape'] = True
 
 cfg.printPopAvgRates = True
